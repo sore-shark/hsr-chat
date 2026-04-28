@@ -1,14 +1,24 @@
 const characters = [
-  { name: "アナイクス", icon: "assets/img/icon/Anaxa.png" },
-  { name: "ヒアンシー", icon: "assets/img/icon/Hyacine.png" },
-  { name: "キャストリス", icon: "assets/img/icon/Castorice.png" },
-  { name: "ファイノン", icon: "assets/img/icon/Phainon.png" }
+  { name: "アナイクス", icon: "assets/img/icon/Anaxa.png", desc: "では、お聞きしますが‥‥‥" },
+  { name: "ヒアンシー", icon: "assets/img/icon/Hyacine.png", desc: "昏光の庭は、ずっとあなたの傍にいるよ～" },
+  { name: "キャストリス", icon: "assets/img/icon/Castorice.png", desc: "書いてる最中だよ" },
+  { name: "ファイノン", icon: "assets/img/icon/Phainon.png", desc: "太陽を称えよ！" }
 ];
 
 const select = document.getElementById("characterSelect");
 const chatBox = document.getElementById("chatBox");
 const input = document.getElementById("messageInput");
 const sendBtn = document.getElementById("sendBtn");
+const title = document.querySelector("header h2");
+const subtitle = document.querySelector("header h3");
+
+function updateHeader() {
+  const selectedName = select.value;
+  const char = characters.find(c => c.name === selectedName);
+
+  title.textContent = char.name;
+  subtitle.textContent = char.desc;
+}
 
 // キャラ選択作成
 characters.forEach(char => {
@@ -17,6 +27,8 @@ characters.forEach(char => {
   option.textContent = char.name;
   select.appendChild(option);
 });
+
+select.addEventListener("change", updateHeader);
 
 // メッセージ送信
 sendBtn.addEventListener("click", sendMessage);
@@ -50,4 +62,6 @@ function sendMessage() {
   chatBox.scrollTop = chatBox.scrollHeight;
 
   input.value = "";
+
+  updateHeader();
 }
