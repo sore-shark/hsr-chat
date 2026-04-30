@@ -1074,3 +1074,108 @@ body.modal-open .create-column h3{
   }
 
 }
+
+/* ===============================
+   スマホ用 左メニュー
+=============================== */
+@media screen and (max-width: 900px){
+
+  .sidebar-left{
+    position:fixed;
+    top:0;
+    left:-260px;
+    width:260px;
+    height:100%;
+    z-index:9999;
+    transition:.3s;
+  }
+
+  .sidebar-left.open{
+    left:0;
+  }
+
+}
+
+@media screen and (max-width: 900px){
+
+  .sidebar-right{
+    position:fixed;
+    right:-100%;
+    top:0;
+    width:300px;
+    height:100%;
+    z-index:9999;
+    transition:.3s;
+  }
+
+  .sidebar-right.open{
+    right:0;
+  }
+
+}
+
+@media screen and (max-width: 900px){
+
+  .layout{
+    display:block;
+  }
+
+  .main-area{
+    width:100%;
+    max-width:none;
+    min-width:0;
+  }
+
+}
+
+@media screen and (max-width: 900px){
+
+  footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:500;
+  }
+
+  main{
+    padding-bottom:80px;
+  }
+
+}
+
+#menuBtn,
+#panelBtn{
+  position:absolute;
+  top:10px;
+  width:36px;
+  height:36px;
+  border:none;
+  border-radius:8px;
+  background:#ddd;
+  cursor:pointer;
+}
+
+#menuBtn{
+  left:10px;
+}
+
+#panelBtn{
+  right:10px;
+}
+
+/* ===============================
+   スマホ専用ボタン（PCでは非表示）
+=============================== */
+#menuBtn,
+#panelBtn{
+  display:none;
+}
+
+/* スマホ時だけ表示 */
+@media screen and (max-width: 900px){
+  #menuBtn,
+  #panelBtn{
+    display:block;
+  }
+}
