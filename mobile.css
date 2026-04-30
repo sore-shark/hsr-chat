@@ -318,4 +318,69 @@ footer{
   flex-shrink:0;
 }
 
+
+/* ===============================
+   スマホ横画面：右パネルのみ縦スクロール
+=============================== */
+@media screen and (max-width:600px) and (orientation: landscape){
+
+/* 全体はスクロール禁止 */
+html, body{
+  height:100%;
+  overflow:hidden;
+}
+
+/* レイアウト固定 */
+.layout{
+  height:100vh;
+  overflow:hidden;
+}
+
+/* 中央はスクロールさせない */
+.main-area{
+  height:100%;
+  overflow:hidden;
+}
+
+/* チャット欄も固定 */
+#chatBox{
+  overflow:hidden;
+}
+
+/* ▼ ここが本命：右だけスクロール */
+.sidebar-right{
+  height:100%;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+/* ▼ 内部のはみ出し防止（超重要） */
+.right-bottom{
+  min-height:auto;
+}
+
+.member-column,
+.create-column{
+  min-height:auto;
+}
+
+/* ▼ ドロップ欄は高さ自動に */
+#groupMembers,
+#selectedGroup{
+  height:auto;
+  max-height:none;
+}
+
+}
+
+/* 通常はスクロール許可 */
+html, body{
+  height:100%;
+  overflow-x:hidden;
+}
+
+.sidebar-right{
+  overflow:visible; /* or 消す */
+}
+
 }
