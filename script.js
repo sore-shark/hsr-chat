@@ -100,6 +100,9 @@ const closeCharModal = document.getElementById("closeCharModal");
 const allCharacterPool = document.getElementById("allCharacterPool");
 const charOverlay = document.querySelector(".char-overlay");
 
+const isMobile = window.matchMedia("(max-width: 600px)").matches;
+const isTablet = window.matchMedia("(min-width: 601px) and (max-width: 1024px)").matches;
+const isPC = window.matchMedia("(min-width: 1025px)").matches;
 /* ===============================
    初期化
 =============================== */
@@ -872,3 +875,35 @@ function checkOrientation(){
 
 window.addEventListener("resize", checkOrientation);
 window.addEventListener("load", checkOrientation);
+
+/* ===============================
+   スマホUI制御
+=============================== */
+
+const menuBtn = document.getElementById("menuBtn");
+const panelBtn = document.getElementById("panelBtn");
+const leftPanel = document.querySelector(".sidebar-left");
+const rightPanel = document.querySelector(".sidebar-right");
+
+/* 左メニュー */
+menuBtn.onclick = () => {
+  leftPanel.classList.toggle("open");
+};
+
+/* 右パネル */
+panelBtn.onclick = () => {
+  rightPanel.classList.toggle("open");
+};
+
+/* 外クリックで閉じる */
+document.addEventListener("click", (e) => {
+
+  if(!leftPanel.contains(e.target) && e.target !== menuBtn){
+    leftPanel.classList.remove("open");
+  }
+
+  if(!rightPanel.contains(e.target) && e.target !== panelBtn){
+    rightPanel.classList.remove("open");
+  }
+
+});
