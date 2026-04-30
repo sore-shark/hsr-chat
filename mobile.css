@@ -108,17 +108,31 @@ footer{
 }
 
 /* =========================================
-   スマホ横画面：右だけスクロール
+   スマホ横画面：右だけスクロール（修正版）
 ========================================= */
 @media screen and (max-width:600px) and (orientation: landscape){
 
-/* 全体固定（スクロール禁止） */
+/* ===============================
+   全体は固定
+=============================== */
 html, body{
+  height:100%;
   overflow:hidden;
 }
 
-/* 中央スクロール禁止 */
+/* ===============================
+   レイアウト固定
+=============================== */
+.layout{
+  height:100vh;
+  overflow:hidden;
+}
+
+/* ===============================
+   中央は完全固定
+=============================== */
 .main-area{
+  height:100%;
   overflow:hidden;
 }
 
@@ -126,19 +140,37 @@ html, body{
   overflow:hidden;
 }
 
-/* ▼ 右パネルだけスクロール許可 */
+/* ===============================
+   ▼ ここが最重要：右だけスクロール
+=============================== */
 .sidebar-right{
+  height:100%;
   overflow-y:auto;
   overflow-x:hidden;
 }
 
-/* ▼ 内部高さ制限解除（重要） */
-.right-bottom,
-.member-column,
-.create-column{
-  min-height:auto;
+/* ===============================
+   ▼ 内部の高さ制限を全部解除
+=============================== */
+
+/* 上のキャラ選択 */
+.char-panel{
+  max-height:none !important;   /* ←これが超重要 */
 }
 
+/* 下エリア */
+.right-bottom{
+  flex:none;        /* ←flexやめる */
+  height:auto;
+}
+
+/* 各カラム */
+.member-column,
+.create-column{
+  height:auto;
+}
+
+/* ドロップ欄 */
 #groupMembers,
 #selectedGroup{
   height:auto;
