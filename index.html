@@ -1,38 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>HSRチャット（日本語版）</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HSR CHAT</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="app">
-    <div class="chat-row"></div>
+<div class="layout">
+
+  <!-- 左：チャット一覧 -->
+  <aside class="sidebar-left">
+    <h3>チャットログ</h3>
+    <div id="chatList"></div>
+  </aside>
+
+  <!-- 中央：チャット画面 -->
+  <div class="main-area">
 
     <header>
-        <h2>HSRチャット</h2>
-        <h3>英語・中国語非対応</h3>
-
-        <div class="header-dot-right"></div>
+      <h2>HSR CHAT</h2>
+      <h3>説明文</h3>
     </header>
 
     <main id="chatBox"></main>
 
     <footer>
-        <div class="input-area">
-            <input id="messageInput" placeholder="メッセージを入力">
-            <button id="sendBtn">送信</button>
-        </div>
-
-        <div class="option-bar">
-            <select id="characterSelect"></select>
-            <button class="option-btn">＋オプション</button>
-        </div>
+      <div class="input-area">
+        <select id="groupSpeakerSelect"></select>
+        <input id="messageInput" placeholder="メッセージを入力">
+        <button id="sendBtn">送信</button>
+      </div>
     </footer>
+
+  </div>
+
+  <!-- 右統合パネル -->
+<aside class="sidebar-right">
+
+  <!-- 上段：キャラ一覧 -->
+  <div class="char-panel">
+    <h3>キャラ選択</h3>
+    <div id="characterPool"></div>
+    <button id="moreCharsBtn">もっとみる</button>
+  </div>
+
+  <!-- 下段 -->
+  <div class="right-bottom">
+
+  <!-- 左列 -->
+  <div class="member-column">
+
+    <h3>現在のメンバー</h3>
+    <div id="groupMembers" class="drop-box"></div>
+
+    <div id="trashZone" class="trash-box">
+      ここへドロップで削除
+    </div>
+
+  </div>
+
+  <!-- 右列 -->
+  <div class="create-column">
+
+    <h3>新規編成</h3>
+    <div id="selectedGroup" class="drop-box"></div>
+
+    <input id="chatNameInput" placeholder="チャット名">
+
+    <button id="newChatBtn">
+      ＋ 新規チャット作成
+    </button>
+
+  </div>
+
+</div>
+
+</aside>
+
+</div>
+
+<!-- キャラ一覧ウィンドウ -->
+<div id="charModal" class="char-modal hidden">
+
+  <div class="char-overlay"></div>
+
+  <div class="char-window">
+
+    <button id="closeCharModal">×</button>
+
+    <h2>キャラクター一覧</h2>
+
+    <div id="allCharacterPool"></div>
+
+  </div>
 
 </div>
 
