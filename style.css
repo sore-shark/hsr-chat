@@ -985,3 +985,11 @@ body.modal-open .create-column h3{
   background:linear-gradient(180deg,#666,#444);
   border-radius:10px;
 }
+/* スマホ時に中央固定を無効化 */
+@media screen and (max-width:600px){
+  .main-area{
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+  }
+}
