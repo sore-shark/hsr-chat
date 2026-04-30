@@ -26,12 +26,6 @@ html, body{
   height:100vh;
 }
 
-/* 右パネル → 下に配置 */
-.sidebar-right{
-  width:100%;
-  height:auto;
-}
-
 /* キャラ横スクロール */
 #characterPool{
   display:flex;
@@ -66,11 +60,6 @@ html, body{
   width:100%;
 }
 
-/* ===============================
-   スマホ用：3カラム維持＆ズレ修正
-=============================== */
-@media screen and (max-width: 600px){
-
 /* 余白削除 */
 body{
   margin:0;
@@ -91,13 +80,6 @@ body{
   width:100%;
   min-width:0;
   max-width:none;
-}
-
-/* ▼ 左右パネルの幅を正常化 */
-.sidebar-left,
-.sidebar-right{
-  width:100%;
-  overflow-y:auto;
 }
 
 /* ▼ キャラ選択が中央に来ないように */
@@ -221,6 +203,108 @@ body{
   flex:1;
   min-height:0; /* ←これも重要 */
   overflow-y:auto;
+}
+
+@media screen and (max-width:600px){
+
+/* ===============================
+   全体固定
+=============================== */
+html, body{
+  height:100%;
+  overflow:hidden;
+}
+
+/* ===============================
+   3カラム
+=============================== */
+.layout{
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* ===============================
+   中央（チャット）
+=============================== */
+.main-area{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  overflow:hidden;
+}
+
+#chatBox{
+  flex:1;
+  min-height:0;
+  overflow-y:auto;
+}
+
+/* ===============================
+   右パネル
+=============================== */
+.sidebar-right{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  min-height:0;
+  overflow:hidden;
+}
+
+/* 上：キャラ選択 */
+.char-panel{
+  flex:0 0 auto;
+  max-height:40%;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+#characterPool{
+  flex:1;
+  min-height:0;
+  overflow-y:auto;
+}
+
+/* 下：2列 */
+.right-bottom{
+  flex:1;
+  min-height:0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  overflow:hidden;
+}
+
+/* 左列（現在メンバー） */
+.member-column{
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+}
+
+#groupMembers{
+  flex:1;
+  min-height:0;
+  overflow-y:auto;
+}
+
+/* 右列（新規編成） */
+.create-column{
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+}
+
+#selectedGroup{
+  flex:1;
+  min-height:0;
+  overflow-y:auto;
+}
+
+/* ゴミ箱固定 */
+.trash-box{
+  flex-shrink:0;
 }
 
 }
