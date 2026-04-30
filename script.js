@@ -852,3 +852,23 @@ function updateSpeakerPreview(){
 }
 
 groupSpeakerSelect.addEventListener("change", updateSpeakerPreview);
+
+/* ===============================
+   横画面強制（対応ブラウザのみ）
+=============================== */
+function forceLandscape(){
+  if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock("landscape").catch(()=>{});
+  }
+}
+
+window.addEventListener("load", forceLandscape);
+
+function checkOrientation(){
+  if(window.innerHeight > window.innerWidth){
+    alert("横画面でご利用ください");
+  }
+}
+
+window.addEventListener("resize", checkOrientation);
+window.addEventListener("load", checkOrientation);
