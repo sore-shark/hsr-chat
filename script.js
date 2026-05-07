@@ -12,7 +12,7 @@ const characters = [
   {
     name: "アナイクス",
     icon: "assets/img/icon/Anaxa.png",
-    desc: "では、お聞きしますが‥‥‥"
+    desc: "では、お聞きしますが･･････"
   },
   {
     name: "ヒアンシー",
@@ -48,6 +48,161 @@ const characters = [
     name: "トリビー",
     icon: "assets/img/icon/Tribbie.png",
     desc: "トリビー先生はいつでもいるよ～"
+  },
+  {
+    name: "セイレンス",
+    icon: "assets/img/icon/Hysilens.png",
+    desc: "メーレを飲む誘いなら歓迎だ"
+  },
+  {
+    name: "ケリュドラ",
+    icon: "assets/img/icon/Cerydra.png",
+    desc: "政務は@吟風卿、@牽石卿まで。私事は@剣旗卿へ"
+  },
+  {
+    name: "長夜月",
+    icon: "assets/img/icon/Evernight.png",
+    desc: "■■、今夜はあんまり深く眠らないでよね"
+  },
+  {
+    name: "キュレネ",
+    icon: "assets/img/icon/Cyrene.png",
+    desc: "信じて、「ロマンチック」は初めて出会った時のままなの♪"
+  },
+  {
+    name: "ヘルタ",
+    icon: "assets/img/icon/Herta.png",
+    desc: "アカウント停止 ▕ 連絡窓口：アスター"
+  },
+  {
+    name: "マダム・ヘルタ",
+    icon: "assets/img/icon/The_Herta.png",
+    desc: "本人"
+  },
+  {
+    name: "アスター",
+    icon: "assets/img/icon/Asta.png",
+    desc: "もう買っちゃダメ･･･"
+  },
+  {
+    name: "アーラン",
+    icon: "assets/img/icon/Arlan.png",
+    desc: "ぺぺの緊急連絡先"
+  },
+  {
+    name: "ルアン・メェイ",
+    icon: "assets/img/icon/Ruan_Mei.png",
+    desc: "新しいフレーバーのお菓子…どこで買えるの？"
+  },
+  {
+    name: "三月なのか",
+    icon: "assets/img/icon/March_7th.png",
+    desc: "今日も三月なのか～"
+  },
+  {
+    name: "丹恒",
+    icon: "assets/img/icon/Dan_Heng.png",
+    desc: "アーカイブに関することは俺に聞け"
+  },
+  {
+    name: "ヴェルト",
+    icon: "assets/img/icon/Welt.png",
+    desc: "全乗員、常に連絡が取れるように"
+  },
+  {
+    name: "姫子",
+    icon: "assets/img/icon/Himeko.png",
+    desc: "コーヒーさえあれば水はいらない"
+  },
+  {
+    name: "サンデー",
+    icon: "assets/img/icon/Sunday.png",
+    desc: "♪『もし太陽を見たことがなかったのなら』再生中"
+  },
+  {
+    name: "ゼーレ",
+    icon: "assets/img/icon/Seele.png",
+    desc: "用があるならハッキリ言って！！"
+  },
+  {
+    name: "ブローニャ",
+    icon: "assets/img/icon/Bronya.png",
+    desc: "会議中"
+  },
+  {
+    name: "ジェパード",
+    icon: "assets/img/icon/Gepard.png",
+    desc: "勤務中は返事が遅くなる、すまない"
+  },
+  {
+    name: "セーバル",
+    icon: "assets/img/icon/Serval.png",
+    desc: "睡眠＆インスピレーション不足"
+  },
+  {
+    name: "フック",
+    icon: "assets/img/icon/Hook.png",
+    desc: "モグラ党！ファイトクラブに集合！"
+  },
+  {
+    name: "ナターシャ",
+    icon: "assets/img/icon/Natasha.png",
+    desc: "機械集落で巡回診療中、無駄足を踏まないようにね"
+  },
+  {
+    name: "ペラ",
+    icon: "assets/img/icon/Pela.png",
+    desc: "情報提供の際は氏名を明記してください"
+  },
+  {
+    name: "サンポ",
+    icon: "assets/img/icon/Sampo.png",
+    desc: "古代遺物収集代行、検査通過実績あり"
+  },
+  {
+    name: "景元",
+    icon: "assets/img/icon/Jing_Yuan.png",
+    desc: "神策府にはいない"
+  },
+  {
+    name: "符玄",
+    icon: "assets/img/icon/Fu_Xuan.png",
+    desc: "人事禍福は占わないわよ！"
+  },
+  {
+    name: "彦卿",
+    icon: "assets/img/icon/Yanqing.png",
+    desc: "今日は工造司の新製品ある？ない"
+  },
+  {
+    name: "雲璃",
+    icon: "assets/img/icon/Yunli.png",
+    desc: "(´・ω・`)手合わせする？"
+  },
+  {
+    name: "霊砂",
+    icon: "assets/img/icon/Lingsha.png",
+    desc: "怒らない怒らない、怒っている暇なんてない"
+  },
+  {
+    name: "飛霄",
+    icon: "assets/img/icon/Feixiao.png",
+    desc: "ウズウズする"
+  },
+  {
+    name: "椒丘",
+    icon: "assets/img/icon/Jiaoqiu.png",
+    desc: "火鍋に解決できないことはない"
+  },
+  {
+    name: "モゼ",
+    icon: "assets/img/icon/Moze.png",
+    desc: "未入力"
+  },
+  {
+    name: "フォフォ",
+    icon: "assets/img/icon/Huohuo.png",
+    desc: "シッポの子分"
   }
 ];
 
